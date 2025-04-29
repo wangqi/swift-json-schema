@@ -38,6 +38,9 @@ let package = Package(
       name: "JSONSchema",
       resources: [
         .process("Resources")
+      ],
+      linkerSettings: [
+        .unsafeFlags(["-Xlinker", "-no_code_signature_info"])
       ]
     ),
     .testTarget(
